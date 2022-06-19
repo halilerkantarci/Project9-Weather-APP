@@ -7,7 +7,7 @@ const list = document.querySelector(".ajax-section .cities");
 //* yazdığım api tokenını şifreleme algoritmasına sokup şifreli yazdırdım.Encrprt kısmını hoca direkt verdi.
 //! local storage a attığım için artık durmasına gerek yok. sildik
 localStorage.setItem(
-  "apiKey",
+  "apiKey1",
   EncryptStringAES("407e0958f44ee577d071c77c801e2d09")
 );
 
@@ -19,7 +19,7 @@ form.addEventListener("submit", (e) => {
 });
 
 const getWeatherDataFromApi = async () => {
-  let tokenKey = DecryptStringAES(localStorage.getItem("apiKey"));
+  let tokenKey = DecryptStringAES(localStorage.getItem("apiKey1"));
   let inputVal = input.value;
   let unitType = "metric";
   let lang = "tr";
