@@ -20,6 +20,7 @@ form.addEventListener("submit", (e) => {
 
 const getWeatherDataFromApi = async () => {
   let tokenKey = DecryptStringAES(localStorage.getItem("apiKey1"));
+  console.log(tokenKey);
   let inputVal = input.value;
   let unitType = "metric";
   let lang = "tr";
