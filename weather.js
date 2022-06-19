@@ -6,10 +6,10 @@ const list = document.querySelector(".ajax-section .cities");
 
 //* yazdığım api tokenını şifreleme algoritmasına sokup şifreli yazdırdım.Encrprt kısmını hoca direkt verdi.
 //! local storage a attığım için artık durmasına gerek yok. sildik
-// localStorage.setItem(
-//   "apiKey",
-//   EncryptStringAES("4d8fb5b93d4af21d66a2948710284366")
-// );
+localStorage.setItem(
+  "apiKey",
+  EncryptStringAES("407e0958f44ee577d071c77c801e2d09")
+);
 
 form.addEventListener("submit", (e) => {
   //? form submit edildiğinde default olarak sayfa kendini yeniliyor. bunu önlemek için yazdık
