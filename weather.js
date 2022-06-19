@@ -46,6 +46,11 @@ const getWeatherDataFromApi = async () => {
             <figcaption>${weather[0].description}</figcaption>
         </figure>
     `;
+    createdLi.innerHTML = createdLiInnerHTML;
+    //! bu şekilde eklersek, en son eklenen en sona eklenir
+    // list.append(createdLi);
+    //! bu şekilde eklersek, en son eklenen en başa eklenir
+    list.prepend(createdLi);
   } catch (error) {}
 
   //! ne kadar input olursa olsun,form altındaki bütün inputların içini siler
