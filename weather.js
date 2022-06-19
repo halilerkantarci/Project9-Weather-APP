@@ -18,8 +18,23 @@ form.addEventListener("submit", (e) => {
   getWeatherDataFromApi();
 });
 
-const getWeatherDataFromApi = () => {
-  alert("http request gone");
+const getWeatherDataFromApi = async () => {
+  let tokenKey = DecryptStringAES(localStorage.getItem("apiKey"));
+  let inputVal = input.value;
+  let unitType = "metric";
+  let lang = "tr";
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${tokenKey}&units=${unitType}&lang=${lang}`;
+
+  try {
+    //? fetch ile kullanımı
+    // const response = await fetch(url).then((response) => response.json());
+    //? axios ile kullanımı
+    //! veriyi çektim
+    const response = await axios(url);
+    const { name, main, sys, weather } = response.data;
+    let iconUrl = `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
+  } catch (error) {}
+
   //! ne kadar input olursa olsun,form altındaki bütün inputların içini siler
   form.reset();
 };
