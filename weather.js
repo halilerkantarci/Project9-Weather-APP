@@ -8,7 +8,7 @@ const list = document.querySelector(".ajax-section .cities");
 //! local storage a attığım için artık durmasına gerek yok. sildik
 localStorage.setItem(
   "apiKey1",
-  EncryptStringAES("407e0958f44ee577d071c77c801e2d09")
+  EncryptStringAES("4fccf41c711776170ecb2f21bc47ea5c")
 );
 
 form.addEventListener("submit", (e) => {
